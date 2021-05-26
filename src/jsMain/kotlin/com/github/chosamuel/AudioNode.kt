@@ -10,6 +10,9 @@ external open class AudioNode : EventTarget {
     var channelCountMode: String
     var channelInterpretation: String
 
-    fun connect(target: AudioNode)
+    /**
+     * @param T can be AudioNode or AudioParam
+     */
+    fun <T> connect(target: T)
     fun disconnect()
 }
